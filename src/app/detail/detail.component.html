@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center justify-content-center" >
+    <form  class="mt-5">
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Title </label>
+          <input type="text" class="form-control" disabled name="title" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="singleTask.title">
+        </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label fw-bold">Description</label>
+        <textarea type="etextmail" class="form-control" disabled name="description" required id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="singleTask.description"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label fw-bold" >State</label>
+        <input type="text" class="form-control" name="state" disabled  id="exampleInputPassword1" [(ngModel)]="singleTask.state">
+      </div>
+      <button  class="btn btn-primary me-5" (click)="deleteTask()">delete</button>
+      <button class="btn btn-primary mx-5" routerLink="/edittask/{{singleTask.id}}">update</button>
+      <button  class="btn btn-primary mx-5" routerLink="/tasks">Back</button>
+  
+    </form>
+  </div>

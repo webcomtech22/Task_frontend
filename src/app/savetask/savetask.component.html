@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center justify-content-center" >
+    <form (ngSubmit)="addTask()"  class="mt-5">
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Title </label>
+          <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="taskData.title">
+        </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label fw-bold">Description</label>
+        <textarea type="etextmail" class="form-control" name="description" required id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="taskData.description"></textarea>
+      </div>
+      <!-- <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label fw-bold" >State</label>
+        <input type="text" class="form-control" name="state"  id="exampleInputPassword1" [(ngModel)]="taskData.state">
+      </div> -->
+      <button class="btn btn-primary me-5" routerLink = "/tasks">Back</button>
+      <button type="submit" class="btn btn-primary mx-5">Save</button>
+  
+    </form>
+  </div>

@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center justify-content-center" >
+
+    <form (ngSubmit)="login()" class="mx-auto mt-5">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label fw-bold">UserName</label>
+        <input type="email" class="form-control " id="exampleInputEmail1" required name="email" aria-describedby="emailHelp" [(ngModel)]="loginData.email">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
+        <input type="password" class="form-control " name="password" required id="exampleInputPassword1" [(ngModel)]="loginData.password">
+      </div>
+      <button type="submit" class="btn btn-primary me-5" routerLink = "/tasks">Login</button>
+      <button class="btn btn-primary mx-5" routerLink="/sign_up">Register</button>
+  
+    </form>
+  </div>
